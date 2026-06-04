@@ -1,9 +1,27 @@
 package problems.nNodeFromEndSide;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class FindingNode {
     Node head;
+
+    public int optimizeNthNodeFromEndSide(int pos){
+        Node temp = head;
+        HashMap<Integer, Node> map = new HashMap<>();
+        int length = 0;
+
+        while(temp != null){
+            length++;
+            map.put(length, temp);
+            temp = temp.next;
+        }
+
+        int mainPos = length - pos + 1;
+
+        Node result = map.get(mainPos);
+        return result.data;
+    }
 
     public int findingNthNodeFromEndSide(int pos){
         int length = size();

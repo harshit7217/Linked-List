@@ -10,7 +10,8 @@ public class Main {
         node.insert();
         node.insert();
 
-        System.out.println("Find the nth node from end side "+node.findingNthNodeFromEndSide(1));
+        System.out.println("Find the nth node from end side "+node.findingNthNodeFromEndSide(3));
 
+        System.out.println("Optimize method "+ node.optimizeNthNodeFromEndSide(3));
     }
 }
