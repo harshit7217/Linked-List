@@ -5,6 +5,25 @@ import java.util.Scanner;
 
 public class FindingNode {
     Node head;
+    private int counter = 0;
+    Node endNode;
+
+//    Using a recursion by single scan
+    public int usingRecursionToFindNthNodeFromEndSide(int pos){
+        Node temp = usingRecursion(head, pos);
+        return endNode.data;
+    }
+
+    private Node usingRecursion(Node temp, int pos){
+        if(temp != null){
+            usingRecursion(temp.next, pos);
+            counter ++;
+            if(pos == counter){
+                endNode = temp;
+            }
+        }
+        return null;
+    }
 
 //    Using single scan and without HashMap
     public int usingSingleScanToFindNthNodeFromEndSide(int pos){
@@ -40,7 +59,7 @@ public class FindingNode {
             temp = temp.next;
         }
 
-        if(pos < length - 1){
+        if(pos > length - 1){
             System.out.println("Fewer number of nodes");
             return -1;
         }

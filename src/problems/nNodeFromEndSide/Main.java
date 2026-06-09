@@ -17,5 +17,8 @@ public class Main {
 
 //        Optimized using single scan
         System.out.println("Optimized by using single scan: "+ node.usingSingleScanToFindNthNodeFromEndSide(3));
+
+//        Single scan by using a Recursion
+        System.out.println("Single scan by using a Recursion: "+ node.usingRecursionToFindNthNodeFromEndSide(3));
     }
 }
