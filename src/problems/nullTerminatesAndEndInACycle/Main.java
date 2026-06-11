@@ -32,7 +32,11 @@ public class Main {
 //        System.out.println(operations.lengthOfLoop());
 
 //        Insert a node in sorted list
-        List current = new List(5);
-        operations.insertListInSortedList(current);
+//        List current = new List(5);
+//        operations.insertListInSortedList(current);
+
+//        Reverse a Linked List
+        List reverseList = operations.reverseList();
+        operations.display(reverseList);
     }
 }

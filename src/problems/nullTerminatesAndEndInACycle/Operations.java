@@ -7,6 +7,26 @@ import java.util.HashSet;
 public class Operations {
     List head;
 
+//    Reverse a Linked List
+    public List reverseList(){
+        List prev = null, current = head;
+        while(current != null){
+            List next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
+    }
+
+    public void display(List node){
+        List current = node;
+        while(current != null){
+            System.out.print(current.data +" ");
+            current = current.next;
+        }
+    }
+
 //    Insert a node in sorted list
     public void insertListInSortedList(List current){
         List temp = head, prev = head;
